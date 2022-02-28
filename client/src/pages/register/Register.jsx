@@ -1,8 +1,7 @@
 import "./register.css";
 
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
 import axios from "axios";
 
 export default function Register() {
@@ -27,7 +26,10 @@ export default function Register() {
       };
 
       try {
-        await axios.post("http://localhost:5000/api/v1/auth/register", user);
+        await axios.post(
+          "https://metachain-social.herokuapp.com/api/v1/auth/register",
+          user
+        );
         history.push("/login");
       } catch (e) {
         console.log(e);
@@ -83,8 +85,7 @@ export default function Register() {
                 color: "white",
                 textAlign: "center",
               }}
-              to="/login"
-            >
+              to="/login">
               <button className="registerRegisterButton" type="submit">
                 Log into Account
               </button>

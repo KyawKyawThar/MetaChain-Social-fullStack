@@ -22,7 +22,7 @@ export default function Post({ posts }) {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/v1/users?userId=${posts.userId}`
+        `https://metachain-social.herokuapp.com/api/v1/users?userId=${posts.userId}`
       );
       setUser(res.data);
     };
@@ -37,9 +37,12 @@ export default function Post({ posts }) {
 
   const likeHandler = () => {
     try {
-      axios.put(`http://localhost:5000/api/v1/posts/${posts._id}/likes`, {
-        userId: currentUser._id,
-      });
+      axios.put(
+        `https://metachain-social.herokuapp.com/api/v1/posts/${posts._id}/likes`,
+        {
+          userId: currentUser._id,
+        }
+      );
     } catch (e) {}
     setLiked(isLiked ? liked - 1 : liked + 1);
     setIsLiked(!isLiked);
@@ -63,8 +66,7 @@ export default function Post({ posts }) {
             </Link>
             <Link
               to={`/profile/${user.username}`}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+              style={{ textDecoration: "none", color: "black" }}>
               <span className="postUsername">{user.username}</span>
             </Link>
 

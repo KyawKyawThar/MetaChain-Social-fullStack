@@ -26,7 +26,7 @@ export default function RightBar({ user }) {
     const userFriend = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/users/friends/${user._id}`
+          `https://metachain-social.herokuapp.com/api/v1/users/friends/${user._id}`
         );
 
         // console.log(res.data);
@@ -43,14 +43,14 @@ export default function RightBar({ user }) {
     try {
       if (followed) {
         await axios.put(
-          `http://localhost:5000/api/v1/users/${user._id}/unfollow`,
+          `https://metachain-social.herokuapp.com/api/v1/users/${user._id}/unfollow`,
           { userId: currentUser._id }
         );
 
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
         await axios.put(
-          `http://localhost:5000/api/v1/users/${user._id}/follow`,
+          `https://metachain-social.herokuapp.com/api/v1/users/${user._id}/follow`,
           { userId: currentUser._id }
         );
         dispatch({ type: "FOLLOW", payload: user._id });
@@ -119,8 +119,7 @@ export default function RightBar({ user }) {
             <Link
               to={"/profile/" + uf.username}
               key={uf._id}
-              style={{ textDecoration: "none", color: "black " }}
-            >
+              style={{ textDecoration: "none", color: "black " }}>
               <div className="rightbarFollowing">
                 <img
                   className="rightbarFollowingImg"

@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import "./share.css";
-import person1 from "../../assets/person/1.jpeg";
+
 import {
   PermMedia,
   Label,
@@ -36,13 +36,19 @@ export default function Share() {
       userPost.img = fileName;
       // console.log({ userPost });
       try {
-        await axios.post("http://localhost:5000/api/v1/upload", data);
+        await axios.post(
+          "https://metachain-social.herokuapp.com/api/v1/upload",
+          data
+        );
       } catch (e) {
         console.log(e);
       }
     }
     try {
-      await axios.post("http://localhost:5000/api/v1/posts", userPost);
+      await axios.post(
+        "https://metachain-social.herokuapp.com/api/v1/posts",
+        userPost
+      );
       window.location.reload();
     } catch (e) {
       console.log(e);

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./navbar.css";
-import person1 from "../../assets/person/1.jpeg";
 
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 import { Link } from "react-router-dom";

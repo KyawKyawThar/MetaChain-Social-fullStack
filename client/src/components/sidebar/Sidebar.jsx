@@ -10,7 +10,7 @@ import {
   Event,
   School,
 } from "@mui/icons-material";
-import person2 from "../../assets/person/2.jpeg";
+
 import React from "react";
 
 import { Users } from "../../dummyData";
