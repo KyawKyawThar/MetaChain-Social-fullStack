@@ -1,0 +1,19 @@
+.sidebarFriendList {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.sidebarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.sidebarFriendName {
+  font-size: 1.4rem;
+  color: rgb(27, 26, 26);
+}

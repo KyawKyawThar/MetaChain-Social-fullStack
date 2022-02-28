@@ -1,0 +1,102 @@
+.rightbar {
+  flex: 3;
+}
+
+.rightbarTop {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.bgImg {
+  width: 40px;
+  height: 40px;
+}
+
+.birthdayText {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.advImg {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.8rem;
+}
+
+.onlineFriendsText {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.rightbarFollowButton{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #1872f2;
+  color: white;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.rightbarFollowButton:focus{
+  outline: none;
+}
+
+.userInfoWrapper {
+  margin-bottom: 2.2rem;
+}
+
+.userInfo {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.userInfoContainer {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.userInfoKey {
+  font-weight: 500;
+  margin-right: 1.5rem;
+  color: #555;
+}
+.userInfoValue {
+  font-weight: 300;
+}
+
+.userFriendTitle {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.rightbarFollowings {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+.rightbarFollowingImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+}
+
+.rightbarFollowingName {
+  font-size: 1.4rem;
+}

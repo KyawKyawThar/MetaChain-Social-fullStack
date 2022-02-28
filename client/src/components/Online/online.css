@@ -1,0 +1,36 @@
+.onlineFrinedList {
+  margin-top: 0.8rem;
+  list-style: none;
+}
+
+.onlineFrinedLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.onlineFriImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.greenBubble {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(96, 231, 96);
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  top: -5px;
+  left: 20px;
+}
+
+.onlineFri {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
